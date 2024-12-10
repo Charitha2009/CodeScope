@@ -3,7 +3,6 @@ import './HomePage.css';
 import Navbar from '../Navbar/Navbar';
 import CustomizeForm from '../CustomizeForm/CustomizeForm';
 import Recommendation from '../Recommendation/Recommendation';
-import CodeSnippet from '../CodeSnippet/CodeSnippet';
 
 const HomePage = () => {
   const [showRecommendation, setShowRecommendation] = useState(false);
@@ -26,22 +25,19 @@ const HomePage = () => {
         </header>
 
         <div className="content">
-          <div className="left-panel">
+          <div className="top-panel">
             <CustomizeForm onCustomize={handleCustomize} />
           </div>
 
-          <div className="right-panel">
+          <div className="bottom-panel">
             {!showRecommendation && (
               <p className="info-text">
-                Get recommendations for your code based on custom inputs.
+                Check our observations and recommendations.
               </p>
             )}
 
             {showRecommendation && (
-              <>
-                <Recommendation formData={formData} />
-                <CodeSnippet algorithm={formData.algorithm} />
-              </>
+              <Recommendation formData={formData} />
             )}
           </div>
         </div>

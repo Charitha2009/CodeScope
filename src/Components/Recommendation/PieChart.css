@@ -1,0 +1,18 @@
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Makes the grid responsive */
+    gap: 20px; /* Adds space between charts */
+    justify-items: center; /* Centers each chart inside its grid cell */
+    width: 100%; /* Ensures the grid takes up full width */
+}
+
+.chart-item {
+    margin-bottom: 150px; /* Adds margin around each chart */
+    padding: 50px; /* Adds padding inside each chart container */
+    text-align: center; /* Centers the text within the chart container */
+    margin-left: 200px;
+}
+
+.chart-item h4 {
+    margin-bottom: 10px; /* Adds space between the title and the chart */
+}

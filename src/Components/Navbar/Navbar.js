@@ -1,16 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import './Navbar.css'; // Optional CSS for styling
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="/">CodeScope</a>
+        {/* Use Link for navigation */}
+        <Link to="/">CodeScope</Link>
       </div>
       <ul className="navbar-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#hypothesis">Hypothesis</a></li>
-        <li><a href="#our-work">Our Work</a></li>
+        {/* Use Link for navigation */}
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/our-work">Our Work</Link></li>
       </ul>
     </nav>
   );
